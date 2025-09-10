@@ -174,6 +174,62 @@ header nav a:hover,
 header nav a.active {
   text-decoration: underline;
 }
+/* ===== Alumni Welcome Section ===== */
+.alumni {
+  background: #f9fbff; /* soft background */
+  padding: 60px 20px;
+}
+
+.alumni-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.alumni-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.alumni-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.alumni-text {
+  flex: 1.2;
+  min-width: 320px;
+}
+
+.alumni-text h2 {
+  font-size: 32px;
+  color: #06299c;
+  margin-bottom: 20px;
+}
+
+.alumni-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .alumni-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .alumni-text h2 {
+    font-size: 28px;
+  }
+}
 
 
 /* ===== GENERIC BUTTON ===== */
@@ -195,48 +251,62 @@ header nav a.active {
 .btn:hover {
   background: #007bbd;
 }
-
-/* ===== Alumni Section ===== */
+/* ===== Welcome Section ===== */
 .alumni {
-  padding: 40px;
   background: #fff;
+  padding: 50px 30px;
 }
 
 .alumni-container {
   display: flex;
-  gap: 30px;
   align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
 .alumni-container img {
-  width: 300px;
-  border-radius: 10px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .alumni-text {
-  max-width: 700px;
+  flex: 1;
 }
 
-/* Alumni Message */
+/* ===== Message Section ===== */
 .alumni-message {
   background: #eef5ff;
-  padding: 30px;
-  margin: 30px;
+  padding: 40px 30px;
+  margin: 40px auto;
   border-radius: 10px;
+  text-align: center;
+  max-width: 1000px;
 }
 
-/* Alumni Cards */
+.alumni-message h3 {
+  font-size: 26px;
+  color: #01218a;
+  margin-bottom: 15px;
+}
+
+/* ===== Cards (Awards, Success) ===== */
 .alumni-card {
   padding: 30px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .card-content {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   background: #eef5ff;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 25px;
+  flex-wrap: wrap;
 }
 
 .card-content.reverse {
@@ -248,8 +318,9 @@ header nav a.active {
 }
 
 .card-image img {
-  width: 350px;
-  border-radius: 10px;
+  width: 360px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card-image .btn {
@@ -258,125 +329,199 @@ header nav a.active {
   left: 15px;
 }
 
-.card-text {
-  flex: 1;
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  padding-top: 50px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background: rgba(0,0,0,0.6);
-}
-
-.modal:target {
-  display: block;
-}
-
-.modal-content {
-  background: #fff;
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 600px;
-  text-align: left;
-}
-
-.modal-content img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.modal-text {
-  font-size: 14px;
-}
-
-.close {
-  float: right;
-  font-size: 24px;
-  text-decoration: none;
-  color: #333;
-}
-
-/* Alumni Projects */
+/* ===== Projects ===== */
 .alumni-projects {
   padding: 30px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .project-card {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   background: #eef5ff;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 25px;
+  flex-wrap: wrap;
 }
 
 .project-card img {
-  width: 350px;
-  border-radius: 10px;
+  width: 360px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.project-card .btn {
-  margin-top: 10px;
-}
-
-/* Alumni Contact */
+/* ===== Contact ===== */
 .alumni-contact {
-  padding: 30px;
+  padding: 40px 30px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .contact-container {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 .contact-box {
   flex: 1;
   background: #d9e8ff;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 12px;
 }
 
 .contact-info {
   flex: 1;
 }
+.card-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.alumni-container img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
 
-/* Map Section */
+/* ===== Alumni Contact Section ===== */
+.alumni-contact {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 40px 30px;
+  background: #f9fbff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.alumni-contact h2 {
+  text-align: center;
+  color: #06299c;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.contact-box {
+  flex: 2;
+  min-width: 280px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 220px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.contact-info a {
+  color: #06299c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Alumni Address & Map ===== */
 .alumni-map {
-  padding: 30px;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 40px 30px;
+  background: #eef5ff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .map-container {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 30px;
   align-items: flex-start;
 }
 
 .address {
   flex: 1;
+  min-width: 260px;
+}
+
+.address p {
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.address .btn {
+  background: #06299c;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.address .btn:hover {
+  background: #041c6a;
 }
 
 .map {
   flex: 1;
+  min-width: 300px;
 }
 
-/* Note */
-.alumni-note {
-  padding: 20px;
-  background: #fff;
-  color: red;
-  font-size: 14px;
+.map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
+
+
+/* ===== Note ===== */
+.alumni-note {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: red;
+  background: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer {
   background: #0b1a78;   /* same dark blue */
   color: #fff;
