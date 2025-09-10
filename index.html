@@ -21,7 +21,7 @@
       <!-- Search icon + Student Life -->
       <div class="actions">
         <button class="search-btn"><i class="fa fa-search"></i></button>
-        <a href="#" class="student-btn">Student Life</a>
+        <a href="https://www.ktu.edu.in/" class="student-btn">University</a>
       </div>
     </div>
   </header>
@@ -57,6 +57,37 @@
     <a href="#" class="btn-register">Register for Execom</a>
   </div>
 </section>
+<!-- Modal Form for Execom Registration -->
+<div id="formModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Execom Registration Form</h2>
+    <form action="#" method="post">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="year">Year of Study:</label>
+      <select id="year" name="year" required>
+        <option value="">-- Select Year --</option>
+        <option value="1st">1st Year</option>
+        <option value="2nd">2nd Year</option>
+        <option value="3rd">3rd Year</option>
+        <option value="4th">4th Year</option>
+      </select>
+
+      <label for="reason">Why do you want to join?</label>
+      <textarea id="reason" name="reason" rows="3" required></textarea>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</div>
 
 <!-- Search Section -->
 <section class="blue-box">
@@ -69,14 +100,15 @@
 
 <section class="explore">
   <div class="container">
-    <h2 class="explore-heading">
+    <h2 class="explore-heading" style="text-align: center;">
       Explore What GECI has to offer on IT Department
     </h2>
-    <p class="explore-subheading">
-      Hands-on, technology-based education that equips graduates with the skills & knowledge that employers want.
-    </p>
   </div>
 </section>
+<p class="explore-subheading" style="font-weight: bold;">
+      Hands-on, technology-based education that equips graduates with the skills & knowledge that employers want.
+   </p>
+   <br>
 
 <!-- Outcomes Section (PSO + PEO) -->
 <section class="outcomes">
@@ -188,15 +220,15 @@
     <div class="resources-grid">
       <div class="resource-card">
         <p>Quick access to study materials and class notes.</p>
-        <a href="#" class="btn">NOTES</a>
+        <a href="https://drive.google.com/drive/folders/159vEAhlDu7IY6IrMQ_s0vEVYjsJK13JA" class="btn">NOTES</a>
       </div>
       <div class="resource-card">
         <p>Check the latest curriculum and course structure.</p>
-        <a href="#" class="btn">SYLLABUS</a>
+        <a href="https://drive.google.com/drive/folders/1s7WBZSC3wErBROVvVUjys7DWzYF_kMv6" class="btn">SYLLABUS</a>
       </div>
       <div class="resource-card">
         <p>Practice with previous year exam papers.</p>
-        <a href="#" class="btn">QP</a>
+        <a href="https://drive.google.com/drive/folders/1s7WBZSC3wErBROVvVUjys7DWzYF_kMv6" class="btn">QP</a>
       </div>
     </div>
   </div>
@@ -244,6 +276,29 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
+<script>
+const modal = document.getElementById("formModal");
+const openBtn = document.querySelector(".btn-register");
+const closeBtn = document.querySelector(".close");
+
+// Open modal when button is clicked
+openBtn.addEventListener("click", function(event) {
+  event.preventDefault(); // prevents the <a> link from refreshing
+  modal.style.display = "flex";
+});
+
+// Close modal when (x) is clicked
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+};
+
+// Close modal when clicking outside the box
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+</script>
 
 
 </body>
